@@ -1,0 +1,59 @@
+@import "mocha.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Terminus";
+    font-weight: bold;
+    font-size: 16px;
+    min-height: 0;
+    padding: 0;
+    margin: -1;
+}
+
+window#waybar {
+    background-color: shade(@base, 0.9);
+    color: @subtext0;
+}
+
+#workspaces button {
+    color: @surface2;
+    margin: 0 5px;
+}
+
+#workspaces button.active {
+    color: @mauve;
+}
+
+#workspaces button.focused {
+    color: #a6adc8;
+    background: #eba0ac;
+    border-radius: 10px;
+}
+
+#workspaces button.urgent {
+    color: @surface0;
+    background: @red;
+    border-radius: 10px;
+}
+
+#custom-light_dark,
+#custom-cpu-temp,
+#battery,
+#workspaces,
+#window,
+#clock,
+#custom-updates {
+    margin: 0 20px;
+}
+
+#workspaces {
+    padding-right: 0px;
+    padding-left: 5px;
+}
+
+#window {
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}

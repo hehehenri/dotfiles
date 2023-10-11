@@ -1,0 +1,57 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Terminus";
+    font-weight: bold;
+    font-size: 16px;
+    min-height: 0;
+    padding: 0;
+    margin: -1;
+}
+
+window#waybar {
+    background: #e7e7ec;
+    color: #4C566A;
+}
+
+#workspaces button {
+    color: #a6adc8;
+    margin: 0 5px;
+}
+
+#workspaces button.active {
+    color: #313244;
+}
+
+#workspaces button.focused {
+    color: #a6adc8;
+    background: #eba0ac;
+    border-radius: 10px;
+}
+
+#workspaces button.urgent {
+    color: #11111b;
+    background: #a6e3a1;
+    border-radius: 10px;
+}
+
+#custom-light_dark,
+#custom-cpu-temp,
+#battery,
+#workspaces,
+#window,
+#clock,
+#custom-updates {
+    margin: 0 20px;
+}
+
+#workspaces {
+    padding-right: 0px;
+    padding-left: 5px;
+}
+
+#window {
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}

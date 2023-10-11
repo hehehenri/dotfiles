@@ -1,0 +1,52 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 25,
+    "margin": "0 25 15 25",
+    "modules-left": ["custom/light_dark", "custom/cpu_temp","battery"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["clock"],
+
+    "custom/light_dark": {
+        "format": "theme",
+        "on-click": "~/.config/waybar/scripts/baraction light",
+        "tooltip": false
+    },
+
+	"custom/github": {
+	    "format": "{}",
+	    "interval": 30,
+	    "exec": "$HOME/.config/waybar/scripts/temp.sh"
+	},
+
+    "custom/cpu_temp": {
+	"format": "temp: {}",
+	"interval": 30,
+        "exec" : "~/.config/waybar/scripts/temp.sh"
+    },
+
+    "clock": {
+        "format": "{:%d/%m %R}",
+	"tooltip": true
+    },
+
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "bat {capacity}%",
+        "format-charging": "+bat {capacity}%"
+    },
+    
+    "temperature": {
+        "thermal-zone": 1,
+        "format": " {temperatureC}°C",
+        "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
+    }
+}
